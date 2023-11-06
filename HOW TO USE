@@ -1,0 +1,61 @@
+To use this app there a couple of things that need to be done before running the app
+
+1. Download the files
+First download the files (youtube.py / spotify.py)
+
+2. Set up YouTube API
+Afterwards you will need to go to 'console.cloud.google.com'
+There you will need to create a new project
+You will then need to enable the YouTube Data API
+Then go to Credentials
+Create Credentials -> API Key
+Save it as you will need it later
+Then go to Create Credentials -> OAuth client ID
+if this is your first time doing this you wll need to configure a consent screen
+just click "external
+put in an Application name and click save
+go back to credentials
+Now go back to credentials and click Create Credentials -> OAuth client ID
+Now for the Application type choose Web application
+Give it a name
+In the Authorized redirect URIs click add URL
+since we're doing this locally do http://localhost:8080
+and go ahead and create
+now it's gonnna display our client ID and secret but unlike the API Key we will not be copying them
+click ok
+and at the OAuth 2.0 Client IDs in the Credentials Tab you will see the OAuth we just created
+to the right there will be a download button which will give us a file and save us time later on
+copy and paste it into the directory and rename it to "client_secrets.json"
+
+3. Set Up Spotify API
+Now the heavy lifting is done
+all we need to do is go to "https://developer.spotify.com/dashboard" and log into your profile
+Click on "Create an App"
+Give it a App name
+and at the Redirect URI we will use "redirect_uri = "https://google.com""
+click "I understand and agree with Spotify's Developer Terms of Service and Design Guidelines"
+Now your app is done
+all you need to do is go to Settings
+and copy your Client ID
+Then Click view Client Secret and copy it too
+
+4. Pip install needed libraries
+If you haven't installed the Google API libraries and Spotipy, install them as they are needed
+
+5. Starting the program
+After the first launch you will be asked to enter your Spotify Client ID and Secret
+After entering you will be redirected to a google.com page to verify you
+All you need to do is copy the URL which is going to be very long and paste it into the terminal where it will ask you for this link
+After this you won't be asked again
+You will also be asked to provide a Spotify Playlist ID which can be gotten from the link of a Spotify playlist
+Then you will be asked for your YouTube API Key
+You will be asked to log into your account
+Just choose the account and if you are getting an error
+Go to 'console.cloud.google.com' -> OAuth Consent Screen
+Scroll down and you'll see "Test Users"
+just add your email adress and it should work fine
+Since we are using the YouTube secret file instead of copying the Secret and ID the program wil do it's thing and log you in
+After that all the needed information will be saved using pickle (a built in pyhthon library) as files with .pickle extension (they can also be read and printed using pickle)
+Now unless the Refresh Token is not valid you will be able to log in every time without having to do all of this
+
+Thank you for trying out my program. This is my first project and I'm new to this so any feedback is appriciated!
