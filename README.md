@@ -8,5 +8,6 @@ The app will take care of the rest
 
 Important to note is uppon giving the needed information for the APIs the app will save in the same directory files with the extension .pickle which will contain data so next time you use the app you won't need to give the same information
 You will only be asked to give a Spotify playlist ID
+I know you are supposed to use enviromental variables for these types of details, not input() and pickle files but I wanted to make it so anyone can just open it, run it and do it's thing, no need to change anything
 
 This is my first actual project, I'm new to this so any feedback and help will be greatly appreciated!
